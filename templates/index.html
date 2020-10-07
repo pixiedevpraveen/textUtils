@@ -1,0 +1,86 @@
+{% extends 'base.html' %} 
+
+{% block description %}Hello friends{% endblock description %}
+
+{% block title %}home{% endblock title %}
+
+{% block body %}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Welcome to Text Utils</strong> You can do many magical work related to text here.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+      
+    <div class="container">
+      <form  action="/analyze" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">TextArea For enter your text</label>
+          <textarea name="text" id="exampleFormControlTextarea1" cols="30" rows="10" class="form-control"></textarea>
+        </div>
+      <div class="custom-control custom-switch">
+        <input type="checkbox" name="removepunc" class="custom-control-input" id="customSwitch1">
+        <label for="customSwitch1" class="custom-control-label"> Remove Punctuation </label>
+      </div>
+
+
+      <div class="custom-control custom-switch">
+        <input type="checkbox" name="fullcaps" class="custom-control-input" id="customSwitch2">
+        <label for="customSwitch2" class="custom-control-label"> UPPERCASE </label>
+      </div>
+
+
+      
+      <div class="custom-control custom-switch">
+        <input type="checkbox" name="extraSpaceRemover" class="custom-control-input" id="customSwitch3">
+        <label for="customSwitch3" class="custom-control-label"> Extra Space Remover </label>
+      </div>
+
+
+      
+      <div class="custom-control custom-switch">
+        <input type="checkbox" name="newLineRemover" class="custom-control-input" id="customSwitch4">
+        <label for="customSwitch4" class="custom-control-label"> New Line Remover </label>
+      </div>
+
+
+      
+      <div class="custom-control custom-switch">
+        <input type="checkbox" name="charCount" class="custom-control-input" id="customSwitch5">
+        <label for="customSwitch5" class="custom-control-label"> Count of characters </label>
+      </div>
+
+      
+      <div class="custom-control custom-switch">
+        <input type="checkbox" name="charCountWithoutSpace" class="custom-control-input" id="customSwitch6">
+        <label for="customSwitch6" class="custom-control-label"> Count of characters (without space ) </label>
+      </div>
+            <div class="containerbtnpr my-2 my-sm-0 mt-2">
+              
+              <button class="btnpr btnpr3" type="submit">submit</button>
+            </div>
+      </form>
+      <div class="bubblespr" style="left: 0;">
+          <img src="static/img/bubble.png" alt="bubble">
+          <img src="static/img/bubble.png" alt="bubble">
+          <img src="static/img/bubble.png" alt="bubble">
+          <img src="static/img/bubble.png" alt="bubble">
+          <img src="static/img/bubble.png" alt="bubble">
+          <img src="static/img/bubble.png" alt="bubble">
+          <img src="static/img/bubble.png" alt="bubble">
+      </div>
+
+      <div class="bubblespr" style="right: 0;">
+          <img src="static/img/bubble.png" alt="bubble">
+          <img src="static/img/bubble.png" alt="bubble">
+          <img src="static/img/bubble.png" alt="bubble">
+          <img src="static/img/bubble.png" alt="bubble">
+          <img src="static/img/bubble.png" alt="bubble">
+          <img src="static/img/bubble.png" alt="bubble">
+          <img src="static/img/bubble.png" alt="bubble">
+      </div>
+
+    </div>
+    
+{% endblock body %}

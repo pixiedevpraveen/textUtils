@@ -1,0 +1,54 @@
+{% extends 'base.html' %} 
+
+{% block description %}about page{% endblock description %}
+
+
+{% block title %}about{% endblock title %}
+
+
+{% block body %}
+
+<!-- Div for profile picture -->
+<div class=" row imageprdiv" >
+
+	<!--  -->
+	<div class="col-md-6">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-50 position-relative">
+        <div class="col-auto ">
+          
+        	<img  style="position: relative;height: 25vh;" src="static/img/Praveen.jpg" alt="Praveen Yadav image">
+        </div>
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary">Author</strong>
+          <h3 class="mb-0">Praveen Yadav</h3>
+          <div class="mb-1 text-muted">Jun 15</div>
+          
+          <a href="#" class="stretched-link">Email</a>
+          <a href="#" class="stretched-link">Pcoder</a>
+        </div>
+      </div>
+    </div>
+	<!--  -->
+</div>
+<!-- Div for profile details -->
+<div class="row no-gutters border rounded flex-md-row mb-4 shadow-sm h-md-50 position-relative">
+
+        <div class="col p-4 d-flex flex-column position-static">
+          
+          <p  class="card-text mb-auto">
+          	Welcome,<br>
+          	This is Praveen Yadav an Engineering (cse) student From Bhopal. <br>
+          	Basically i am from a small village of Sehore district. <br>
+          	I am pursuing my Engineering degree from Technocrats Institute of Technology, Bhopal. <br>
+          	Professionally i am a software developer and Designer. <br>
+          	And web development and designing is my hobby so i like it very much and want to make many awesome website. <br>
+          	I am also known as Pcoder or PixieCoder. <br>
+          	And my Team name is PixieDevs. <br>
+          	This portFolio website is made by me for showcase my work.
+			
+          </p>
+          <a href="#" class="stretched-link">Continue reading</a>
+        </div>
+      </div>
+
+{% endblock body %}

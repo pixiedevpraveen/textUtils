@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="{% block description %}{% endblock description %}">  
+          <!-- main bst CSS -->
+    <link rel="stylesheet" href="static/css/b.css" >
+    
+
+    <title>{% block title %}
+    
+    {% endblock title %} | Text Utils</title>
+</head>
+<body>
+  
+  <link href="static/css/pr.css" rel="stylesheet">
+
+  <nav class="navbar blog-header navbar-expand-lg navbar-dark ">
+        <a class="navbar-brand" href="/">Text Utils</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            
+
+            <li class="nav-item active">
+              <a class="nav-link" href="/about">about me</a>
+            </li>
+        
+         <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                services
+            </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/services">Web Designing</a>
+                    <a class="dropdown-item" href="#">Graphic Designing</a>
+                   
+                      <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Software Development
+                      </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/services">Web App</a>
+                            <a class="dropdown-item" href="#">UI Software</a>
+                            <a class="dropdown-item" href="#">Mobile Application</a>
+                           
+                        </div>
+                </div>
+        </li>
+
+        <li class="nav-item active">
+          <a class="nav-link" href="contact" tabindex="-1" >contact</a>
+        </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <div class="containerbtnpr my-2 my-sm-0">
+              
+              <button class="btnpr btnpr3" type="submit">Search</button>
+            </div>
+          </form>
+        </div>
+  </nav>
+
+	{% if messages %}
+    {% for message in messages %}
+	<div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0" role="alert">
+		<strong>{{ message }}</strong>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+    {% endfor %}
+{% endif %}
+
+
+	{% block body %}
+	{% endblock body %}
+
+<!-- footer section -->
+  <footer class="blog-footer">
+  <p>This Website made by <a href="https://pyadav7.github.io">Praveen Yadav</a></p>
+  <p>
+    <a href="#">Back to top</a>
+  </p>
+</footer>
+	
+    <!-- Optional JavaScript -->
+    <script src="static/css/s.js" ></script>
+    <script src="static/css/p.js" ></script>
+    <script src="static/css/b.js" ></script>
+  </body>
+</html>
